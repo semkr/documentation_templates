@@ -1,0 +1,4 @@
+== Closing Up Checklist ==
+Information regarding the tasks required to ensure that the Makerspace is safely shutdown
+before locking the doors.
+
