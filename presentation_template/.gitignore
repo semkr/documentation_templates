@@ -1,3 +1,5 @@
+*.nav
+*.snm
 *.out
 *.lot
 *.aux
