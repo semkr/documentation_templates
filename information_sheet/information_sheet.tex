@@ -7,6 +7,14 @@
 \usepackage{graphicx} % allows for working with images
 \DeclareGraphicsExtensions{.pdf,.png,.jpeg,.jpg,.gif} % configures latex to look for the following image extensions
 
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+
+% fix for \rowcolors in {tabularx}, see https://tex.stackexchange.com/a/297357/4918
+\newcounter{tblerows}
+\expandafter\let\csname c@tblerows\endcsname\rownum
+\usepackage{booktabs}
+
 \begin{document}
 \pagenumbering{gobble}
 
@@ -69,5 +77,38 @@ X91 TW63
 Email: info@southeastmakerspace.org
 Phone Number: +353 89 422 5909
 \end{verbatim} \par
+
+\section*{SEMS Locking up Checklist}
+
+\subsection*{Important}
+The following checklist \textbf{must} be performed by members of the South East Makerspace before closing the space down.
+
+
+\begin{table}[h]
+	\centering
+	\caption{Closing up checklist} 
+	\label{tab:checklist}
+	\rowcolors{2}{}{black!10}
+	\begin{tabularx}{.9\textwidth}{XX}
+		\toprule
+		\textbf{Task} & \textbf{Information} \\ 
+		\midrule
+		Turn off all heaters & Wall mounted electric heaters must be first switched off using their power cords, then switched off at the wall. The portable electric in snug must be switched off using the onboard switches, then switched off at the wall also. \textbf{purple} dots on map. \\ 
+		Unplug or switch off all sockets & \textbf{red} dots on map. Do not switch off the fridge \\ 
+		Shut off the water & \textbf{blue} dot on map. This is potentially more important in the Winter months \\ 
+		Ensure all doors are locked (including cabinets) & \textbf{green} dots on map \\ 
+		Shut off all the lights & \textbf{yellow} dots on map \\ 
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+%
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=9cm]{Sems}
+	\caption{SEMS Interior Map}
+	\label{fig:sems_map}
+\end{figure}
+%
 
 \end{document}
